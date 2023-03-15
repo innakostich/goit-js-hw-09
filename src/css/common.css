@@ -28,7 +28,7 @@ img {
 
 button[data-start] {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: teal;
   color: white;
   border: none;
   border-radius: 5px;
@@ -37,7 +37,7 @@ button[data-start] {
 }
 
 button[data-start]:hover {
-  background-color: #3e8e41;
+  background-color: rgb(5, 109, 109);
 }
 
 
@@ -50,7 +50,7 @@ button[data-start]:hover {
 .field {
   margin: 0 10px;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: teal;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
@@ -58,11 +58,11 @@ button[data-start]:hover {
 .value {
   font-size: 48px;
   font-weight: bold;
-  color: #fff;
+  color: white;
 }
 
 .label {
   font-size: 16px;
-  color: #fff;
+  color: white;
   margin-top: 5px;
 }

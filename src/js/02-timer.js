@@ -54,7 +54,7 @@ const options = {
         secondsRef.textContent = '00';
         startBtn.setAttribute('disabled', true);
 
-        // Add confetti effect
+       
         confetti({
           particleCount: 100,
           spread: 70,
