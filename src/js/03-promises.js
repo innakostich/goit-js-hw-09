@@ -22,13 +22,13 @@ form.addEventListener('submit', (event) => {
   const stepInput = event.target.elements['step'];
   const amountInput = event.target.elements['amount'];
 
-  const delay = parseInt(delayInput.value, 10);
-  const step = parseInt(stepInput.value, 10);
+  const firstDelay = parseInt(delayInput.value, 10);
+  const delayStep = parseInt(stepInput.value, 10);
   const amount = parseInt(amountInput.value, 10);
 
   for (let i = 0; i < amount; i++) {
     const position = i + 1;
-    const currentDelay = delay + step * i;
+    const currentDelay = firstDelay + delayStep * i;
 
     createPromise(position, currentDelay)
       .then(({ position, delay }) => {
