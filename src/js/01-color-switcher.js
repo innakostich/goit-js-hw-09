@@ -1,4 +1,3 @@
-
 import '../css/common.css';
 
 const startButton = document.querySelector('[data-start]');
@@ -11,13 +10,15 @@ function getRandomHexColor() {
 let intervalId = null;
 
 startButton.addEventListener('click', () => {
-  startButton.disabled = true; 
+  startButton.disabled = true;
+  stopButton.disabled = false;
   intervalId = setInterval(() => {
     document.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
 });
 
 stopButton.addEventListener('click', () => {
-  startButton.disabled = false; 
+  stopButton.disabled = true;
+  startButton.disabled = false;
   clearInterval(intervalId);
 });

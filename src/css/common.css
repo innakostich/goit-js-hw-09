@@ -41,6 +41,21 @@ button[data-start]:hover {
 }
 
 
+button[data-stop] {
+  padding: 10px 20px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[data-stop]:hover {
+  background-color: rgb(5, 109, 109);
+}
+
+
 .timer {
   display: flex;
   justify-content: center;

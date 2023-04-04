@@ -38,10 +38,10 @@ const options = {
   onClose(selectedDates) {
     if (selectedDates[0] < new Date()) {
       Notify.failure('Please choose a date in the future');
+      startBtn.setAttribute('disabled', true);
       return;
     }
     startBtn.removeAttribute('disabled');
-
     const targetTime = selectedDates[0].getTime();
     const showTimer = () => {
       const now = new Date().getTime();
@@ -54,7 +54,6 @@ const options = {
         secondsRef.textContent = '00';
         startBtn.setAttribute('disabled', true);
 
-       
         confetti({
           particleCount: 100,
           spread: 70,
@@ -64,7 +63,7 @@ const options = {
         return;
       }
       const { days, hours, minutes, seconds } = convertMs(timeDifference);
-      daysRef.textContent = days;
+      daysRef.textContent = addLeadingZero(days);
       hoursRef.textContent = addLeadingZero(hours);
       minutesRef.textContent = addLeadingZero(minutes);
       secondsRef.textContent = addLeadingZero(seconds);
